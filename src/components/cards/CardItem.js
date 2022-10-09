@@ -7,7 +7,7 @@ function CardItem(props) {
       <div className='card__body'>
         <h3 className='card__title'>{props.title}</h3>
         <h4 className='card__price'>{props.price}</h4>
-        <button className='card__btn'></button>
+        {/* <button className='card__btn'>Add to cart</button> */}
       </div>
     </div>
   );

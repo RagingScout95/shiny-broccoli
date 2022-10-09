@@ -4,7 +4,7 @@ import axios from "axios";
 import Navbar from './components/navBar/Navbar';
 import Home from './components/pages/Home';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import ProductPage from "./components/productpage/ProductPage";
+// import ProductPage from "./components/productpage/ProductPage";
 
 function App() {
   const getAllUsers = async () => {
