@@ -22,7 +22,7 @@ function HeroSection() {
           buttonSize='btn--large'
           // onClick={console.log('hey')}
         >
-          Equivments <i className='far fa-play-circle' />
+          Equipment <i className='far fa-play-circle' />
         </Button>
       </div>
     </div>
