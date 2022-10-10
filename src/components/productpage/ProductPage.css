@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  gap: 2%;
+  height: max-content;
 }
 
 .product-image-container {
@@ -29,6 +31,7 @@
   height: 100px;
   box-shadow: 1px 1px 10px rgba(10, 10, 10, 0.2);
   transition: box-shadow ease-in;
+  border-radius: 2%;
 }
 
 .image-slider-box:hover {
@@ -41,10 +44,10 @@
   height: 100%;
   padding: 0 1.5%;
   box-shadow: 1px 1px 10px rgba(10, 10, 10, 0.2);
+  border-radius: 2%;
 }
 
 img {
-  border-radius: 5%;
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -52,6 +55,106 @@ img {
 
 .product-details-container {
   width: 60vw;
-  background-color: brown;
+  /* background-color: brown; */
   height: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  padding: 2rem;
 }
+
+.product-title > h1 {
+  font-family: "Poppins", sans-serif;
+}
+
+.product-details > h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.order-option {
+  display: flex;
+  flex-direction: row;
+}
+
+.options {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+button {
+  background-color: rgb(255, 166, 0);
+  height: 3rem;
+  width: 10rem;
+  border-radius: 5%;
+}
+
+button:hover {
+  background-color: rgba(242, 175, 6, 0.987);
+}
+
+.specification {
+  margin-top: 2rem;
+}
+
+table {
+  width: 90%;
+  padding: 0;
+}
+tr {
+  width: 90%;
+  margin: 0;
+  margin-bottom: 2px;
+}
+
+.feild {
+  width: 20%;
+  height: 2rem;
+}
+
+.feild-ans {
+  background-color: rgb(209, 203, 196);
+  padding: 2rem;
+}
+
+.product-description {
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.product-description > p {
+  text-align: start;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 
+{_id: "6342d961100f06b79b65cb6e",…}
+category: "equipment"
+productdescription: "Milton handy first aid medical box, essential to deal with minor accidents or injuries. It's compact shape facilitates easy storage of all basic medical equipment’s."
+productimages: [{imageurl: "https://m.media-amazon.com/images/I/61v0JPUnwGS._SY450_.jpg",…}]
+0: {imageurl: "https://m.media-amazon.com/images/I/61v0JPUnwGS._SY450_.jpg",…}
+productname: "MILTON Emergency Medical Portal Box BPA Free Medical Box"
+productowner: "632bf1616cb5484f276c9ed8"
+productprice: "241"
+productspecs: {dimensions: {height: 14, length: 23.5, breadth: 15.3}, weight: 267, brand: "MILTON",…}
+brand: "MILTON"
+color: "‎White"
+countryoforigin: "india"
+dimensions: {height: 14, length: 23.5, breadth: 15.3}
+includedcomponents: "1 box"
+manufacturer: "‎Hamilton Houseware India Pvt Ltd"
+material: "Plastic"
+modelname: "MILTON_BOX"
+weight: 267
+_id: "6342d961100f06b79b65cb71"
+reviews: [{user: "6342883e3d4c8d69944028ce", rating: 4.3,…}]
+0: {user: "6342883e3d4c8d69944028ce", rating: 4.3,…}
+__v: 0
+_id: "6342d961100f06b79b65cb6e */
