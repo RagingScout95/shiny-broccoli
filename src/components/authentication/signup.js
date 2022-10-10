@@ -1,5 +1,6 @@
 import React from 'react';
 import './signup.css';
+import { Link } from 'react-router-dom';
 
 function SignUp(){
     const [fname, setfname] = React.useState();
@@ -39,10 +40,12 @@ function SignUp(){
     function emailErrHandler(e){
 
     }
-    var password = "";
+    let password = "";
+    var c = 8;
     function passErrHandler(e){
         let passwd = e.target.value;
         password = passwd;
+        c+=1;
         if (passwd.length <8){
             setpassErr(true);
         }
@@ -50,15 +53,17 @@ function SignUp(){
             setpassErr(false);
         }
         setpass(pass)
+        return c;
     }
-
+    console.log(c);
     function cpassErrHandler(e){
         let cpasswd = e.target.value;
+        console.log(password===cpasswd);console.log(password+"-"+cpasswd)
         if (cpasswd===password){
-            setcpassErr(true);
+            setcpassErr(false);
         }
         else{
-            setcpassErr(false);
+            setcpassErr(true);
         }
         setcpass(cpass)
     }
@@ -67,8 +72,8 @@ function SignUp(){
         console.log(fname, lname, email, pass)
     }
 return(
-    <div>
-    <div class="signup-box">
+    <div className='signup-body'>
+    <div className="signup-box">
         <h1>Sign Up</h1>
         <h4>Its free and only takes a minute</h4>
         <form onSubmit={dataSubmission}>
@@ -92,8 +97,8 @@ return(
         <p>By clicking the Sign Up botton, you agree to our <br></br>
         <a href="#">Term and Conditions</a> and <a href="#">Policy Privacy</a>
         </p>
+        <p className="outside">Already have an account? <Link to="/login">Login here</Link></p>
     </div>
-    <p class="outside">Already have an account? <a  href="#">Login here</a></p>
     </div>
 );
 }

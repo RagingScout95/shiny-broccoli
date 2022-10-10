@@ -1,8 +1,10 @@
-/* body{
-    background-image: url('/images/medician_repeat.webp');
-    background-color: #344a72;
-    background-repeat: repeat;
-  }  */
+.signup-body{
+  background-image: url('/images/medician_repeat.webp');
+  background-color: #344a72;
+  background-repeat: repeat;
+  height: 89vh;
+  display: flex;
+}
   .signup-box{
     width: 360px;
     height: 620px;
