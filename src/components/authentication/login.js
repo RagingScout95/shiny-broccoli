@@ -28,7 +28,7 @@ async function dataSubmission(e){
             if(response.data.message=="sccessfully LoggedIn"){
                 navigate("/");
             }else{
-
+                document.querySelector('.msg').innerHTML = `<p>${response.data.message}</p>`
             }
         }).catch(err=> console.log(err));
         if (!post) return null;
