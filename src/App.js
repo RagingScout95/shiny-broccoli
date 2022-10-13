@@ -17,10 +17,11 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/:product" element={<ProductPage />} />
+            <Route path="/products/:product" element={<ProductPage />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
             <Route path="/products" element={<Cards />} />
+            {/* <Route path="/About_us" element={<Home />} /> */}
           </Routes>
         </Router>
       }

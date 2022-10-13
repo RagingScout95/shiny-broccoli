@@ -20,7 +20,7 @@ const ProductPage = () => {
   }
   useEffect(() => {
     getProduct();
-  }, [product]);
+  }, []);
   if (!productDetails) return null;
 
   const handleOnclick = (e) => {
