@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "../../App.css";
 import { Button } from "../navBar/Button";
@@ -19,8 +20,12 @@ function HeroSection() {
     }
   }
 
+  useEffect(() => {
+    scrollFunction();
+  }, [hash]);
+
   return (
-    <div id="home" onLoad={scrollFunction()}>
+    <div id="home">
       <div className="hero-container">
         <h1>BESTMEDS AWAITS</h1>
         <p>What are you waiting for?</p>
