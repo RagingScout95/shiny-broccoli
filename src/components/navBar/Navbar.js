@@ -8,7 +8,7 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  const { user } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
 
   return (
     <>
@@ -49,10 +49,15 @@ function Navbar() {
           {user === null ? (
             <Link to="/login" className="btn-mobile">
               {" "}
-              <Button buttonStyle="btn--outline">login</Button>
+              <Button buttonStyle="btn--outline">Login</Button>
             </Link>
           ) : (
-            <Link className="nav-links">{"Welcome, " + user.username}</Link>
+            <div className="user-nav">
+              <Link className="nav-links">{"Welcome, " + user.username}</Link>
+              <Link to="/" className="btn-mobile" onClick={() => setUser(null)}>
+                <Button buttonStyle="btn--outline">Logout</Button>
+              </Link>
+            </div>
           )}
         </div>
       </nav>
