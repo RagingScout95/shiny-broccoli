@@ -1,26 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { Button } from "./Button";
+import { UserContext } from "../authentication/UserContext";
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  const [button, setButton] = useState(true);
+  const { user } = useContext(UserContext);
 
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener("resize", showButton);
   return (
     <>
       <nav className="navbar">
@@ -57,11 +46,13 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && (
+          {user === null ? (
             <Link to="/login" className="btn-mobile">
               {" "}
               <Button buttonStyle="btn--outline">login</Button>
             </Link>
+          ) : (
+            <Link className="nav-links">{"Welcome, " + user.username}</Link>
           )}
         </div>
       </nav>
