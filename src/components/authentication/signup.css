@@ -62,7 +62,9 @@
   .outside a{
     color: white;
   }
-  
+  .term_condition{
+    color: rgb(5, 13, 255);
+  }
   /* .navbar a{
     padding: 3px;
     color: #49c1a2;

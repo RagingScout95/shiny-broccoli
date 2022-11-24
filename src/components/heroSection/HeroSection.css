@@ -64,6 +64,56 @@
 }
 
 #about {
-  height: 600px;
+  /* height: 600px; */
+  height: auto;
   width: 100%;
+  background-color: rgb(13, 12, 12);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+}
+.box{
+  width: 20%;
+  height: 200px;
+  padding: 1%;
+  color: #fff;
+  /* border: 2px solid white; */
+} 
+.para{
+  text-align: left;
+  padding-top: 14px;
+  font-size: 17px;
+  color: #fff;
+  justify-content: start;
+}
+h3{
+  padding-bottom: 10px;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.verticalLine{
+  margin-top: 30px;
+  height: 150px;
+  border: 1px solid hsla(0,0%,100%,.5);
+  box-shadow: rgb(255, 255, 255) 0px 7px 50px 0px;
+  /* display: none; */
+}
+@media screen and (max-width:1200px) {
+  .box{
+    width: 40%;
+  }
+  .verticalLine{
+    display: none;
+  }
+}
+@media screen and (max-width:600px) {
+  .box{
+    width: 90%;
+  }
+  .verticalLine{
+    display: none;
+  }
 }

@@ -53,7 +53,7 @@ function Navbar() {
             </Link>
           ) : (
             <div className="user-nav">
-              <Link className="nav-links">{"Welcome, " + user.username}</Link>
+              <Link className="nav-user-links">{"Welcome, " + user.username}</Link>
               <Link to="/" className="btn-mobile" onClick={() => setUser(null)}>
                 <Button buttonStyle="btn--outline">Logout</Button>
               </Link>

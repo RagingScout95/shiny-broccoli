@@ -67,6 +67,7 @@
 .user-nav {
   display: flex;
   flex-direction: row;
+  padding: 0;
 }
 
 .fa-bars {

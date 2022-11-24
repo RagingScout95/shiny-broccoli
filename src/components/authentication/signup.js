@@ -95,7 +95,7 @@ return(
             <input type="button" value="Submit" />
         </form>
         <p>By clicking the Sign Up botton, you agree to our <br></br>
-        <a href="#">Term and Conditions</a> and <a href="#">Policy Privacy</a>
+        <a className='term_condition' href="/">Term and Conditions</a> and <a className='term_condition' href="/">Policy Privacy</a>
         </p>
         <p className="outside">Already have an account? <Link to="/login">Login here</Link></p>
     </div>
