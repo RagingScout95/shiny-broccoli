@@ -1,0 +1,24 @@
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 70vw;
+  border-style: solid;
+  border-color: azure;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  gap: 2rem;
+}
+.primg {
+  object-fit: cover;
+  height: 100%;
+  width: 20%;
+}
+
+.prname {
+  width: 60%;
+}
+
+.prprice {
+  width: 15%;
+}

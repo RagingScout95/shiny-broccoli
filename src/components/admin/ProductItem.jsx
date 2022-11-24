@@ -4,6 +4,7 @@ import "./ProductItem.css";
 const ProductItem = (product) => {
   return (
     <div className="productitem" key={product._id}>
+      <div className="pimg">{/* <img src={} alt="" srcset="" /> */}</div>
       <div className="pname">
         <h1>{product.productname}</h1>
       </div>

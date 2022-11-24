@@ -1,18 +1,18 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useContext } from "react";
-import { Await, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { UserContext } from "../authentication/UserContext";
 import "./ProductPage.css";
 
 const ProductPage = () => {
-  const navigate = useNavigate();
   const url = "http://localhost:5000/ecommerce/api/v1/";
   const [productDetails, setProductDetails] = useState(null);
   const [mainImage, setMainImage] = useState("");
   const { product } = useParams();
   const { user } = useContext(UserContext);
+  const navigate = useNavigate();
   async function getProduct() {
     await axios
       .get(`${url + product}`)
@@ -22,19 +22,27 @@ const ProductPage = () => {
       })
       .catch((error) => console.log(error));
   }
+
   useEffect(() => {
     getProduct();
   }, []);
   if (!productDetails) return null;
 
   const addToCart = async () => {
-    if (user != null) {
-      await axios
-        .post(`${url + "addtocart/" + user._id + "/" + product}`)
-        .then((response) => console.log(response.data))
-        .catch((error) => console.log(error));
-    } else {
+    if (user === null) {
       navigate("/login");
+    } else {
+      const incart = user.cart.filter((item) => {
+        return item._id === product;
+      });
+      if (incart.length != 0) {
+        console.log("Already in cart");
+      } else {
+        await axios
+          .post(`${url + "addtocart/" + user._id + "/" + product}`)
+          .then((response) => console.log(response.data))
+          .catch((error) => console.log(error));
+      }
     }
   };
 
