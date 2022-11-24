@@ -1,14 +1,9 @@
 import React from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
-import ProductItem from "./ProductItem";
-import "./Dashboard.css";
-import { useContext } from "react";
-import { UserContext } from "../authentication/UserContext";
+import "./orders.css";
+import { useState, useEffect } from 'react';
 
 const Dashboard = () => {
-  const { user, setUser } = useContext(UserContext);
-  const catalog = user === null ? [] : user.catalog;
   return (
     <div className="dashboard">
       <div className="box-a">
@@ -28,11 +23,11 @@ const Dashboard = () => {
       </div>
         
       <div className="box-b">
-        <h1 className="box-b-h1">Your Products</h1>
+        <h1 className="box-b-h1">Orders</h1>
         <hr></hr>
-        {catalog.map((product) => {
-          return ProductItem(product);
-        })} 
+        {/* {catalog.map((product) => {
+          return orderItems(product);
+        })}  */}
       </div >
 
     </div>

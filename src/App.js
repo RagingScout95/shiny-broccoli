@@ -12,6 +12,8 @@ import Dashboard from "./components/admin/Dashboard";
 import { UserContext } from "./components/authentication/UserContext";
 import Adminlogin from "./components/adminauth/Adminlogin";
 import Adminsignup from "./components/adminauth/Adminsignup";
+import AddProduct from "./components/admin/AddProduct";
+import Orders from "./components/admin/orders";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -30,6 +32,8 @@ function App() {
               <Route path="/admin" element={<Dashboard />} />
               <Route path="/adminsignup" element={<Adminsignup />} />
               <Route path="/adminlogin" element={<Adminlogin />} />
+              <Route path="/addproduct" element={<AddProduct />} />
+              <Route path="/orders" element={<Orders />} />
             </Routes>
           </UserContext.Provider>
         </Router>
