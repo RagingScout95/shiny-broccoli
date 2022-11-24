@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./orders.css";
-import { useState, useEffect } from 'react';
+import { UserContext } from "../authentication/UserContext";
+import orderItems from "./orderitem";
 
 const Dashboard = () => {
+  const { user, setUser } = React.useContext(UserContext);
+  const orders = user === null ? [] : user.orders;
   return (
     <div className="dashboard">
       <div className="box-a">
@@ -25,9 +28,9 @@ const Dashboard = () => {
       <div className="box-b">
         <h1 className="box-b-h1">Orders</h1>
         <hr></hr>
-        {/* {catalog.map((product) => {
-          return orderItems(product);
-        })}  */}
+        {orders.map((order) => {
+          return orderItems(order);
+        })} 
       </div >
 
     </div>

@@ -34,6 +34,10 @@ function App() {
               <Route path="/admin" element={<Dashboard />} />
               <Route path="/adminsignup" element={<Adminsignup />} />
               <Route path="/adminlogin" element={<Adminlogin />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/confirmorder" element={<ConfirmOrder />} />
+              <Route path="/addproduct" element={<AddProduct />} />
+              <Route path="/orders" element={<Orders />} />
             </Routes>
           </UserContext.Provider>
         </Router>
