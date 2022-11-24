@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import "./login.css";
+import "./adminlogin.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { UserContext } from "./UserContext";
+import { UserContext } from "../authentication/UserContext";
 
-function login() {
+function Adminlogin() {
   const { setUser } = useContext(UserContext);
   const [email_, setemail] = React.useState();
   const [pass, setpass] = React.useState();
@@ -20,15 +20,14 @@ function login() {
 
   async function dataSubmission(e) {
     e.preventDefault();
-    // console.log(email_, pass);
     await axios
-      .get(`http://localhost:5000/ecommerce/api/v1/login/${email_}/${pass}`)
+      .get(
+        `http://localhost:5000/ecommerce/api/v1/login/admin/${email_}/${pass}`
+      )
       .then((response) => {
-        // setPost(prevres=>{return response.data});
-        // console.log(response.data.message);
         if (response.data.message === "sccessfully LoggedIn") {
           setUser(response.data.result);
-          navigate("/");
+          navigate("/admin");
         } else {
           document.querySelector(
             ".msg"
@@ -53,14 +52,11 @@ function login() {
           </button>
         </form>
         <p className="outside">
-          Don't have an account? <Link to="/signup">Signup</Link>
-        </p>
-        <p className="outside">
-          Login ad admin? <Link to="/adminlogin">Admin</Link>
+          Don't have an account? <Link to="/adminsignup">Signup</Link>
         </p>
       </div>
     </div>
   );
 }
 
-export default login;
+export default Adminlogin;
