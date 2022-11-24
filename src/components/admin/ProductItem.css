@@ -1,0 +1,16 @@
+.productitem {
+  width: 70%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.9rem;
+  align-items: center;
+}
+
+.pname {
+  width: 80%;
+}
+
+.pprice {
+  width: 20%;
+}

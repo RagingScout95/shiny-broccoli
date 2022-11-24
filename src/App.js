@@ -10,6 +10,8 @@ import Login from "./components/authentication/login";
 import Cards from "./components/cards/Cards";
 import Dashboard from "./components/admin/Dashboard";
 import { UserContext } from "./components/authentication/UserContext";
+import Adminlogin from "./components/adminauth/Adminlogin";
+import Adminsignup from "./components/adminauth/Adminsignup";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -26,6 +28,8 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/products" element={<Cards />} />
               <Route path="/admin" element={<Dashboard />} />
+              <Route path="/adminsignup" element={<Adminsignup />} />
+              <Route path="/adminlogin" element={<Adminlogin />} />
             </Routes>
           </UserContext.Provider>
         </Router>

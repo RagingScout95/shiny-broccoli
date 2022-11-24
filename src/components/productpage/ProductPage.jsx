@@ -1,14 +1,18 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useContext } from "react";
+import { Await, useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { UserContext } from "../authentication/UserContext";
 import "./ProductPage.css";
 
 const ProductPage = () => {
+  const navigate = useNavigate();
   const url = "http://localhost:5000/ecommerce/api/v1/";
   const [productDetails, setProductDetails] = useState(null);
   const [mainImage, setMainImage] = useState("");
   const { product } = useParams();
+  const { user } = useContext(UserContext);
   async function getProduct() {
     await axios
       .get(`${url + product}`)
@@ -22,6 +26,17 @@ const ProductPage = () => {
     getProduct();
   }, []);
   if (!productDetails) return null;
+
+  const addToCart = async () => {
+    if (user != null) {
+      await axios
+        .post(`${url + "addtocart/" + user._id + "/" + product}`)
+        .then((response) => console.log(response.data))
+        .catch((error) => console.log(error));
+    } else {
+      navigate("/login");
+    }
+  };
 
   const handleOnclick = (e) => {
     const imageElement = e.target;
@@ -68,7 +83,7 @@ const ProductPage = () => {
                   <button>Buy Now</button>
                 </Link>
                 <Link>
-                  <button>Add to Cart</button>
+                  <button onClick={addToCart}>Add to Cart</button>
                 </Link>
               </div>
             </section>
