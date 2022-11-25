@@ -28,12 +28,20 @@ const Dashboard = () => {
       <div className="box-b">
         <h1 className="box-b-h1">Orders</h1>
         <hr></hr>
-        {orders.map((order) => {
+          <div className="orderspan-main">
+            <div className="orderbox"></div>
+            <p className="orderspan">Image</p>
+            <p className="orderspan">Product Name</p>
+            <p className="orderspan">Customer Name</p>
+            <p className="orderspan">Ship</p>
+            <p className="orderspan">Delivery</p>
+            <p className="orderspan">Payment</p>
+          </div>
+          {orders.map((order) => {
           return orderItems(order);
         })} 
+        </div>
       </div >
-
-    </div>
   );
 };
 

@@ -52,16 +52,16 @@ function HeroSection() {
         <div className="box">
           <h3>BESTMEDS</h3>
           <hr />
-          <p className="para">This is BESTMEDS about us details.asdasdsaaaaaaaad sa das d as da s a a sa s s d fdsfasfas f as fas as f asf asf as f    asdfasd</p>
+          <p className="para">Bestmeds.com is one of India’s most trusted pharmacies, dispensing quality medicines at reasonable prices to happy customers – PAN India.</p>
         </div>
         <div className="verticalLine"></div>
         <div className="box">
           <h3>Products</h3>
           <hr />
-          <p className="para"><a href="/">best Equipment</a></p>
-          <p className="para"><a href="/">Meds_1</a></p>
-          <p className="para"><a href="/">Meds_2</a></p>
-          <p className="para"><a href="/">Meds_3</a></p>
+          <p className="para"><a href="/">Browse by A-Z</a></p>
+          <p className="para"><a href="/">Browse by Manufacturers</a></p>
+          <p className="para"><a href="/">Health Articles</a></p>
+          <p className="para"><a href="/">FAQs</a></p>
         </div>
         <div className="verticalLine"></div>
         <div className="box">

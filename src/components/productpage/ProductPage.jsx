@@ -168,7 +168,7 @@ const ProductPage = () => {
           </section>
         </div>
       </div>
-      <section className="reviews">{productDetails.reviews[0].review}</section>
+      {/* <section className="reviews">{productDetails.reviews[0].review}</section> */}
     </>
   );
 };

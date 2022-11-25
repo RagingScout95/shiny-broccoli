@@ -40,7 +40,7 @@ function Adminlogin() {
   return (
     <div className="login-body">
       <div className="login-box">
-        <h1>Login</h1>
+        <h1>Admin Login</h1>
         <form onSubmit={dataSubmission}>
           <label>Email</label>
           <input type="email" onChange={setter_email}></input>

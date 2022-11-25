@@ -1,4 +1,4 @@
-.productitem {
+.ordersmain {
     width: auto;
     height: 130px;
     display: flex;
@@ -8,6 +8,7 @@
     margin: 2.5%;
     color: rgb(47, 47, 47);
     text-align: left;
+    justify-content: space-evenly;
     
     border: solid 1px #555;
     background-color: rgb(205, 205, 205);
@@ -16,11 +17,43 @@
     -webkit-box-shadow: 10px 10px  5px rgba(0,0,0,0.6);
     -o-box-shadow: 10px 10px  5px rgba(0,0,0,0.6);
   }
-  
+  .orderspan-main{
+    width: auto;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2.5%;
+    justify-content: space-around;
+
+    border: solid 1px rgb(193, 193, 193);
+    background-color: rgb(31, 31, 31);
+    box-shadow: 10px 10px  5px rgba(0,0,0,0.6);
+    -moz-box-shadow: 10px 10px  5px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 10px 10px  5px rgba(0,0,0,0.6);
+    -o-box-shadow: 10px 10px  5px rgba(0,0,0,0.6);
+  }
+  .box_orders-2{
+    height: auto;
+    width: 30%;
+  }
+  .box_orders-1{
+    align-self: left  ;
+  }
+  .orderitemes-1{
+    height: 130px;
+    width: auto;
+    align-self: left  ;
+  }
+  .orderspan{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 25px;
+  }
   .pname {
     width: 80%;
   }
-  
+
   .pprice .pcategory {
     width: 20%;
   }
@@ -39,3 +72,7 @@
     text-align: center;
     margin: 1%
   }
+  .pimg{
+    object-fit: cover;
+  }
+  
